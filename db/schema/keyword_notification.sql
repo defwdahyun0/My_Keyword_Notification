@@ -1,0 +1,41 @@
+﻿CREATE TABLE `users` (
+	`u_id`	VARCHAR[50]	NOT NULL,
+	`password`	VARCHAR[50]	NULL,
+	`email`	VARCHAR[100]	NULL,
+	`date`	DATETIME	NULL
+);
+
+CREATE TABLE `page` (
+	`p_id`	UNSIGNED INT	NOT NULL,
+	`url`	VARCHAR[1000]	NULL,
+	`p_name`	VARCHAR[100]	NULL
+);
+
+CREATE TABLE `Registration info` (
+	`up_id`	UNSIGNED INT	NOT NULL,
+	`u_id`	VARCHAR[50]	NOT NULL,
+	`p_id`	UNSIGNED INT	NOT NULL
+);
+
+CREATE TABLE `keyword` (
+	`k_id`	UNSIGNED INT	NOT NULL,
+	`keyword`	VARCHAR[100]	NULL,
+	`u_id`	VARCHAR[50]	NOT NULL
+);
+
+ALTER TABLE `users` ADD CONSTRAINT `PK_USERS` PRIMARY KEY (
+	`u_id`
+);
+
+ALTER TABLE `page` ADD CONSTRAINT `PK_PAGE` PRIMARY KEY (
+	`p_id`
+);
+
+ALTER TABLE `Registration info` ADD CONSTRAINT `PK_REGISTRATION INFO` PRIMARY KEY (
+	`up_id`
+);
+
+ALTER TABLE `keyword` ADD CONSTRAINT `PK_KEYWORD` PRIMARY KEY (
+	`k_id`
+);
+

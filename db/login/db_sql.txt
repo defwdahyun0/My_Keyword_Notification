@@ -1,0 +1,11 @@
+1. 회원가입(user 테이블에 id, pw 저장)
+INSERT INTO user (u_id, password) VALUES (?, ?)
+
+2. 로그인
+2-1. 사용자가 입력한 id를 가지는 모든 user table의 column 가져오기
+SELECT * FROM user WHERE u_id = ?
+
+2-2. password가 일치하는지 확인
+     위 query문의 결과: results
+results == false    //사용자가 입력한 id가 user table에 존재하지 않는 경우
+results[0].password != password     //사용자가 입력한 pw가 db에 있는 pw와 다른 경우
