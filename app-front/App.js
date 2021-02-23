@@ -1,6 +1,8 @@
 import React from "react";
 import Loading from "./Loading";
 import Switch from "./app/routers/Switch";
+import TabStackScreen from "./app/routers/TabStackScreen"
+import SettingScreen from "./app/screens/Tab/SettingScreen"
 
 export default class extends React.Component {
   state = {
@@ -14,10 +16,11 @@ export default class extends React.Component {
   };
 
   render() {
-    if (this.state.isLoading) {
-      return <Loading />;
-    } else {
-      return <Switch />;
-    }
+    //if (this.state.isLoading) {
+    //  return <Loading />;
+    //} else {
+    // return <Switch />;
+    return <TabStackScreen />;
+    //}
   }
 }
